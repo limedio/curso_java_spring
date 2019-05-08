@@ -1,11 +1,12 @@
  
-package pkg02_colecciones;
+package com.sinensia.pruebas;
 
+import com.sinensia.FechaSinMinutos;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
 
-public class ProbandoFechas {
+public class Fechas {
     //Metodo estático. Función externa que no tiene que ver con la clase, son funciones generales que hacen cosas generales que no tienen 
     //nada que ver con la aplicación.
     
