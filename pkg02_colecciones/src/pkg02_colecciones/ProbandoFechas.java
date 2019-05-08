@@ -19,8 +19,7 @@ public class ProbandoFechas {
         FechaSinMinutos miCumple;
         miCumple = new FechaSinMinutos(2019, 6, 2);
             
-        System.out.println("fecha" + fecha);
-        System.out.println("micumple" + miCumple);
+        
         
         
         if (miCumple.getTimeWithoutSeconds().after(fecha.getTimeWithoutSeconds())){
@@ -30,7 +29,8 @@ public class ProbandoFechas {
         }else if (miCumple.equals(fecha)){
             System.out.println("¡Cumpleaños feliz!");
         }
-            
+        
+       
         
         }
 }
