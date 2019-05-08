@@ -19,6 +19,8 @@ public class Main {
         listaClientes.add(10);
         listaClientes.add("Texto");
         listaClientes.add(new Cliente(1, "Ana", "ana@aa.com"));*/
+        ProbandoFechas.probar();
+        probandoHerencia();
     }
     
     //Hashmap funciona por clave y valor.
@@ -82,7 +84,13 @@ public class Main {
             System.out.println("Cliente: " + cliente.getNombre() );
         }
     }
-    
+    public static void probandoHerencia() {
+        ClienteInvitado invitado = new ClienteInvitado(0, "Juan", null);
+        invitado.setDuracionMaxima(10);
+        System.out.println("Cliente: " + invitado.getNombre()
+                + " duracion: " + invitado.getDuracionMaxima());
+        
+    }
      
     
 }
