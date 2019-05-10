@@ -6,7 +6,7 @@
 package com.sinensia.poo_avanzado;
 
 import com.sinensia.Cliente;
-import com.sun.security.ntlm.Client;
+
 
 /**
  *
@@ -20,6 +20,20 @@ public class ProbandoAnimales {
         TortugaNinja michelangelo 
                 = new TortugaNinja("Michelangelo", 175.5f);
         michelangelo.mover();
+        
+        
+        try{
+            michelangelo.volar();
+        }catch (UnsupportedOperationException e){
+            System.err.println(e.getMessage());
+        }catch (StringIndexOutOfBoundsException e){
+            System.err.println("Error string"  + e.getMessage());
+        }catch (Exception e){
+            System.err.println("Error general" + e.getMessage());
+        }finally{
+             System.out.println("Siempre me ejecuto. Cierro recursos.");
+        }
+        
         
         Caballo rocinante = new Caballo("Rocinante", 3f);
         rocinante.mover();
