@@ -19,13 +19,18 @@ public class TortugaNinja extends Mascota{
     @Override
     public void volar() {
         //lanzo esta excepción para indicar que no se permite esta operación
-        //System.err.println(nombre + " No puedes volar");
-         throw new UnsupportedOperationException("Exception: No puedes volar"); 
+        System.err.println(nombre + " No puedes volar");
+         //throw new UnsupportedOperationException("Exception: No puedes volar"); 
    }
 
     @Override
     public void comer() {
         System.out.println(nombre + " come pizza");
+    }
+
+    @Override
+    public void saludarAlPropietario() {
+       System.out.println("Hola " + propietario.getNombre() + " soy el " + nombre);
     }
 
  

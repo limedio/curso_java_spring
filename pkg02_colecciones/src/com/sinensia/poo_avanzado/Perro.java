@@ -25,5 +25,10 @@ public class Perro extends Mascota{
     public void comer() {
         System.out.println(nombre + " come pienso");
     }
+
+    @Override
+    public void saludarAlPropietario() {
+       System.out.println("Hola " + propietario.getNombre() + " soy el " + nombre);
+    }
     
 }
