@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sinensia.poo_avanzado;
+package com.sinensia.poo_avanzando;
 
 /**
  *
  * @author Admin
  */
 public abstract class Animal {
+    
     protected int patas;
     protected boolean aerobico;
     protected boolean acuatico;
@@ -23,22 +24,20 @@ public abstract class Animal {
         this.acuatico = false;
         this.patas = 0;
     }
-
     public Animal(int patas, boolean aerobico, boolean acuatico, String nombre, float tamanho) {
         this.patas = patas;
         this.aerobico = aerobico;
         this.acuatico = acuatico;
         this.nombre = nombre;
         this.tamanho = tamanho;
-    }
-
-    public abstract void comer();
-    public abstract void volar();
+    }  
     
-    //Declaro el método abstracto para que no se puededa instanciar. por eso, necesito que la clase sea abstracta también
     public abstract void mover();
+    public abstract void comer();    
+    public abstract void volar();
+            
     
-    public boolean isAnfibio(){
+    public boolean isAnfibio() {
         return aerobico && acuatico;
     }
 
@@ -81,6 +80,5 @@ public abstract class Animal {
     public void setTamanho(float tamanho) {
         this.tamanho = tamanho;
     }
-    
     
 }

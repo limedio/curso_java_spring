@@ -1,49 +1,59 @@
-package com.sinensia.poo_avanzado;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.sinensia.poo_avanzando;
 
 /**
  *
  * @author Admin
  */
-public class Tigre extends AnimalSalvaje implements Depredador, Mamifero{ 
+public class Tigre extends AnimalSalvaje 
+        implements Depredador, Mamifero {
 
     public Tigre(String nombre, float tamanho) {
         super(4, true, false, nombre, tamanho);
     }
-
     @Override
     public void mover() {
         System.out.println(nombre + " corre veloz");
     }
-
-    @Override
-    public void volar() {
-        System.out.println(nombre + " salta, pero no vuela");
-    }
-
     @Override
     public void comer() {
-        System.out.println(nombre + " come otros animales");
+ 
+        System.out.println(nombre + " caza, mastica, engulle.");
+    }
+    @Override
+    public void volar() {
+        throw new UnsupportedOperationException("No puede volar, loco!"); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void cazar(String presa) {
-        System.out.println( nombre  + " salta y devora a  " + presa);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void mamar() {
-        System.out.println( nombre  + " mama porque es mamífero");
+    public String mamar(Mamifero mam) {
+        
+        return "El tigre " + nombre + " mama de "+
+                mam.toString();
+       // return "El tigre " + nombre + " mama de "+
+        //        mam.nombrar();
+        /*if(mam instanceof Animal) {
+            Animal anim = (Animal) mam;
+            return "El tigre " + nombre + " mama de "+
+                anim.getNombre();
+        } else {
+            return null;
+        }*/
     }
 
- 
-    public String mamar(Mamifero mamoDe) {
-       /* Animal miAnimal = (Animal)mamoDe;
-        System.out.println("Este tigre " +  nombre  + " mama de " + miAnimal.getNombre());
-        return miAnimal.getNombre();*/
-        return "El tigre " + nombre + " mama de "+
-                mamoDe.toString();
+    @Override
+    public String nombrar() {
+        return nombre;
     }
-      public String toString() {
-        return "Tigre" + nombre;
-    }
+    
+    
 }

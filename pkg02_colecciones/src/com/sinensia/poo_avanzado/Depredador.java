@@ -3,17 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sinensia.poo_avanzado;
+package com.sinensia.poo_avanzando;
 
 /**
  *
  * @author Admin
  */
-//Todos los métodos son abstractos!!!!
+// Todos lo métodos son abstractos
 public interface Depredador {
-   //Aunque lo permite java, no es recomendable que una interface tenga propiedades. Debería contener sólo métodos.
-    
+    // String presa = "";
     
     void cazar(String presa);
-    
 }

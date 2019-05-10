@@ -3,61 +3,44 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sinensia.poo_avanzado;
+package com.sinensia.poo_avanzando;
 
 /**
  *
  * @author Admin
  */
-public class Dragon extends Mascota implements Depredador, Mamifero{
+public class Dragon extends Mascota implements Depredador {
 
-    public Dragon( String nombre, float tamanho) {
+    public Dragon(String nombre, float tamanho) {
         super(4, true, false, nombre, tamanho);
     }
     
-    public Dragon( String nombre, float tamanho, int patas) {
+    public Dragon(String nombre, float tamanho, int patas) {
         super(patas, true, false, nombre, tamanho);
     }
-  
     @Override
-    public void comer() {
+    public void mover() {
+        System.out.println(nombre + " vuela asustando a la peña");
+    }
+    @Override
+    public void comer() { 
         System.out.println(nombre + " quema y luego te come");
     }
-
     @Override
     public void volar() {
         System.out.println(nombre + " vuela, te quema y te come");
     }
-
-    @Override
-    public void mover() {
-         System.out.println(nombre + " se mueve asustando a la peña");
-    }
-
     @Override
     public void saludarAlPropietario() {
-       System.out.println("Hola " + propietario.getNombre() + " soy el " + nombre);
+  
+        System.out.println(propietario.getNombre()
+            + " te saluda con una mirada chunga "
+                + nombre  + "!!!");
     }
 
     @Override
     public void cazar(String presa) {
-        System.out.println( nombre  + " quema, vuela y caza a  " + presa);
+        System.out.println(nombre
+            + " quema, vuela y caza a " + presa);
     }
-
-    @Override
-    public void mamar() {
-        System.out.println( nombre  + " mama porque es mamífero");
-    }
-
-    @Override
-    public String mamar(Mamifero mamoDe) {
-       Animal miAnimal = (Animal)mamoDe;
-        System.out.println("Este dragon " +  nombre  + " mama de " + miAnimal.getNombre());
-        return miAnimal.getNombre();
-    }
-
-
- 
-    
-    
 }
