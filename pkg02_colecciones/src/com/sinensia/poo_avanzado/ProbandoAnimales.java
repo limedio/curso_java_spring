@@ -31,7 +31,6 @@ public class ProbandoAnimales {
         ((Depredador) miDragon).cazar("conejo");
         ((Mamifero) miDragon).mamar();
          
-        
         Dragon otroDragon = new Dragon("otroDragon", 2222);
         Tigre otroTigre = new Tigre("otroTigre", 5335);
         

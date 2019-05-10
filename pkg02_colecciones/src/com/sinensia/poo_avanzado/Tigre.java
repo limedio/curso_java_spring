@@ -37,8 +37,13 @@ public class Tigre extends AnimalSalvaje implements Depredador, Mamifero{
 
  
     public String mamar(Mamifero mamoDe) {
-        Animal miAnimal = (Animal)mamoDe;
-        System.out.println("Este " +  nombre  + " mama de " + miAnimal.getNombre());
-        return miAnimal.getNombre();
+       /* Animal miAnimal = (Animal)mamoDe;
+        System.out.println("Este tigre " +  nombre  + " mama de " + miAnimal.getNombre());
+        return miAnimal.getNombre();*/
+        return "El tigre " + nombre + " mama de "+
+                mamoDe.toString();
+    }
+      public String toString() {
+        return "Tigre" + nombre;
     }
 }

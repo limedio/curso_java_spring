@@ -51,17 +51,13 @@ public class Dragon extends Mascota implements Depredador, Mamifero{
 
     @Override
     public String mamar(Mamifero mamoDe) {
-        Animal miAnimal = (Animal)mamoDe;
-        System.out.println("Ahora es el " +  nombre  + " el que mama de " + miAnimal.getNombre());
+       Animal miAnimal = (Animal)mamoDe;
+        System.out.println("Este dragon " +  nombre  + " mama de " + miAnimal.getNombre());
         return miAnimal.getNombre();
     }
 
-    @Override
-    public String toString() {
-        return super.toString(); //To change body of generated methods, choose Tools | Templates.
-    }
 
-
+ 
     
     
 }
