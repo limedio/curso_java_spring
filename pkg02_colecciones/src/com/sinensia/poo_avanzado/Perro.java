@@ -9,27 +9,25 @@ package com.sinensia.poo_avanzado;
  *
  * @author Admin
  */
-public class Tucan extends Animal{
+public class Perro extends Mascota{
 
-    public Tucan(String nombre, float tamanho) {
-        super(2, true, false, nombre, tamanho);
+    public Perro(String nombre, float tamanho) {
+        super(4, true, false, nombre, tamanho);
     }
 
     @Override
     public void mover() {
-        System.out.println(nombre + " Volando voy!");
+        System.out.println(nombre + " corre detrás del gato");
     }
 
     @Override
     public void volar() {
-        System.out.println(nombre + " vuela distancias cortas");
+        System.out.println(nombre + " no vuela");
     }
 
     @Override
     public void comer() {
-        System.out.println(nombre + " come insectos");
+        System.out.println(nombre + " come pienso");
     }
-    
-    
     
 }

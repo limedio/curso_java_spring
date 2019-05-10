@@ -32,7 +32,8 @@ public abstract class Animal {
         this.tamanho = tamanho;
     }
     
-    
+    public abstract void comer();
+    public abstract void volar();
     
     //Declaro el método abstracto para que no se puededa instanciar. por eso, necesito que la clase sea abstracta también
     public abstract void mover();
