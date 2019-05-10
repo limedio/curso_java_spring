@@ -15,18 +15,22 @@ public class ProbandoAnimales {
         Tucan unTucan = new Tucan("Turigualpa", 15.8F);
         unTucan.mover();
         unTucan.comer();
+        unTucan.volar();
         
         TortugaNinja michelangelo = new TortugaNinja("Michelangelo", 157.5F);
         michelangelo.mover();
         michelangelo.comer();
+        michelangelo.volar();
         
         Tigre unTigre = new Tigre("Tigreton", 150.4F);
         unTigre.mover();
         unTigre.comer();
+        unTigre.volar();
         
         Perro unPerro = new Perro("Scooby", 200F);
         unPerro.mover();
         unPerro.comer();
+        unPerro.volar();
         
         
     }

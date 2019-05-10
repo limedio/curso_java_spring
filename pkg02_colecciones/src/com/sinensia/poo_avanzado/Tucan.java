@@ -4,7 +4,7 @@ package com.sinensia.poo_avanzado;
  *
  * @author Admin
  */
-public class Tucan extends Animal{
+public class Tucan extends AnimalSalvaje{
 
     public Tucan(String nombre, float tamanho) {
         super(2, true, false, nombre, tamanho);

@@ -31,7 +31,7 @@ public abstract class Animal {
         this.nombre = nombre;
         this.tamanho = tamanho;
     }
-    
+
     public abstract void comer();
     public abstract void volar();
     
