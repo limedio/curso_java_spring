@@ -6,8 +6,12 @@
 package com.sinensia.pruebas;
 
 import com.sinensia.Cliente;
+import com.sinensia.ClienteInvitado;
+import com.sinensia.ClienteVip;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -15,6 +19,10 @@ import java.util.Map;
  * @author Admin
  */
 public class Colecciones {
+    
+    private static ArrayList<Cliente> arrayListaClientes;
+    
+    
     public static void ejemploHashMap(){
       HashMap<String, Cliente> diccionarioClientes;
         diccionarioClientes = new HashMap<String, Cliente>();
@@ -71,4 +79,26 @@ public class Colecciones {
             System.out.println("Cliente: " + cliente.getNombre() );
         }
     }
+    public static void ejemploSet(){
+        
+        //Conjunto de elementos únicos. No permite duplicados y los guarda sin orden.
+        HashSet<Cliente> conjuntoClientes = new HashSet<Cliente>();
+        conjuntoClientes.add(new Cliente(1, "juan", null));
+        conjuntoClientes.add(new Cliente(2, "juan", null));
+        Cliente clientePepe = new Cliente(3, "pepe", null);
+        
+        conjuntoClientes.add(clientePepe);
+        conjuntoClientes.add(clientePepe);
+        
+        
+        for (Cliente cli : conjuntoClientes) {
+            cli.mostrar();
+        }
+    }
+    
+  
+    
+
+
+    
 }

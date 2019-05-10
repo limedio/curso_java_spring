@@ -13,7 +13,7 @@ import com.sinensia.ClienteInvitado;
  */
 public class Herencia {
             
-       public static void probandoHerencia(){
+    public static void probandoHerencia(){
            ClienteInvitado invitado = new ClienteInvitado(0, "Juan", null);
         
         
@@ -22,6 +22,8 @@ public class Herencia {
                 + " duracion: " + invitado.getDuracionMaxima());
         
     }
+       
+    
 }
     
  

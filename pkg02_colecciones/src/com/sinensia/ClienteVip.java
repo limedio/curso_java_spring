@@ -11,10 +11,11 @@ package com.sinensia;
  */
 public class ClienteVip extends Cliente{
     
-    private String beneficio;
+    private String beneficios;
 
-    public ClienteVip(long id, String nombre, String email) {
+    public ClienteVip(long id, String nombre, String email, String beneficios) {
         super(id, nombre, email);
+        this.beneficios = beneficios;
     }
 
     /**
@@ -23,7 +24,7 @@ public class ClienteVip extends Cliente{
      * @return the value of beneficio
      */
     public String getBeneficio() {
-        return beneficio;
+        return beneficios;
     }
 
     /**
@@ -32,7 +33,17 @@ public class ClienteVip extends Cliente{
      * @param beneficio new value of beneficio
      */
     public void setBeneficio(String beneficio) {
-        this.beneficio = beneficio;
+        this.beneficios = beneficio;
+    }
+    
+     @Override //indico al compilador que estoy sobreescribiendo un método. Si no se pone, no pasa nada   
+    public void mostrar(){
+        //Sobreescritura del método mostrar de la clase padre     
+        //Diferentes formas de recuperar el valor de las variables de clase:
+        System.out.print("Cliente VIP: " );
+        super.mostrar();
+        System.out.println("    Beneficio: " + beneficios);
+        
     }
 
 }

@@ -34,5 +34,24 @@ public class ClienteInvitado extends Cliente {
     public void setDuracionMaxima(int duracionMaxima) {
         this.duracionMaxima = duracionMaxima;
     }
+        // Al heredar de cliente, puedo acceder a las variables de la clase padre: cliente, id y email:
+    @Override //indico al compilador que estoy sobreescribiendo un método. Si no se pone, no pasa nada   
+    public void mostrar(){
+        //Sobreescritura del método mostrar de la clase padre     
+        //Diferentes formas de recuperar el valor de las variables de clase:
+        System.out.print("Invitado: " );
+        super.mostrar();
+        System.out.println("     Duración máxima: " + duracionMaxima);
+        
+    }
+    
+ 
+
+    /*
+    Si quiero llamar al método mostrar de esta clase, llamaría :
+    mostrar();
+    Si quiero llamar al método mostrar de la clase padre, el que he sobreescrito, llamo:
+    super.mostrar();
+    */
 
 }

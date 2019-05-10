@@ -21,15 +21,21 @@ public class Fechas {
         miCumple = new FechaSinMinutos(2019, 6, 2);
             
         
+        if (miCumple.equals(fecha)){
+            System.out.println("¡Cumpleaños feliz!");
+        }else if (miCumple.after(fecha)){
+           System.out.println("Aun no cumples");
+        }else if (miCumple.before(fecha)){
+           System.out.println("Ya cumpliste");
+        }
         
-        
-        if (miCumple.getTimeWithoutSeconds().after(fecha.getTimeWithoutSeconds())){
+       /* if (miCumple.getTimeWithoutSeconds().after(fecha.getTimeWithoutSeconds())){
             System.out.println("Aun no cumples");
         } else if (miCumple.getTimeWithoutSeconds().before(fecha.getTimeWithoutSeconds())){
             System.out.println("Ya cumpliste");
         }else if (miCumple.equals(fecha)){
             System.out.println("¡Cumpleaños feliz!");
-        }
+        }*/
         
        
         
