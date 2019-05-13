@@ -11,8 +11,53 @@ package com.sinensia;
  */
 public class Producto {
     protected long id;
-    protected String nombre;  //si fuera private, no lo vería ningún objeto fuera de esta clase. Lo pongo protected para que lo vean también los hijos (protected)
-    private String email;
-    private boolean activo;
+    protected String nombre;  
+    private long precio;
+    private long stock;
+
+    public Producto(long id, String nombre, long precio) {
+        this.id = id;   
+        if (nombre == null || nombre == ""){
+            System.err.println("Nombre de proucto inválido");
+        }
+        this.id = id;
+        this.nombre = nombre; 
+        this.precio = precio;
+        this.stock = 0;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public long getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(long precio) {
+        this.precio = precio;
+    }
+
+    public long getStock() {
+        return stock;
+    }
+
+    public void setStock(long stock) {
+        this.stock = stock;
+    }
+    
+    
     
 }

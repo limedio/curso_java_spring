@@ -52,17 +52,19 @@ public class ClienteDAO implements InterfazDao<Cliente>{
 
     @Override
     public List<Cliente> leerTodos() {
-        ArrayList arrayClientes = new ArrayList();
+        ArrayList arrayClientes;
+        arrayClientes = new ArrayList();
          for (Map.Entry<Long, Cliente> entrada : mapa.entrySet()){
-             // arrayClientes.set(0, entrada.getValue());
+              arrayClientes.add(entrada);
+              System.out.println("arrayClientes: " + arrayClientes.toString() + "key es: " + entrada.getKey() + " value es: " + entrada.getValue());
          }
           return arrayClientes;
     }
 
     @Override
     public void modificar(Cliente nuevoValor) {
-        
-        System.out.println("modifico valor de cliente " + nuevoValor.getId());
+        mapa.put(nuevoValor.getId(), nuevoValor );
+        System.out.println("modifico valor de cliente " + nuevoValor.getId() + "con el nombre : " + nuevoValor.getNombre());
     }
     
     
