@@ -20,7 +20,6 @@ public class Producto {
         if (nombre == null || nombre == ""){
             System.err.println("Nombre de proucto inválido");
         }
-        this.id = id;
         this.nombre = nombre; 
         this.precio = precio;
         this.stock = 0;
@@ -56,6 +55,11 @@ public class Producto {
 
     public void setStock(long stock) {
         this.stock = stock;
+    }
+
+    @Override
+    public String toString() {
+        return "Producto [" + id + ", " + nombre + ", " + stock + "]";
     }
     
     

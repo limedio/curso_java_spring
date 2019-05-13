@@ -1,6 +1,7 @@
 package com.sinensia;
 
  
+import com.sinensia.dao.ProbandoDAO;
 import static com.sinensia.dao.ProbandoDAO.probarCliente;
 import com.sinensia.genericos.ProbandoGenericos;
 import com.sinensia.poo_avanzado.ProbandoAnimales;
@@ -18,6 +19,7 @@ public class Main {
      */
     public static void main(String[] args) {
         probarCliente();
+        ProbandoDAO.probarProducto();
         /*ProbandoGenericos.probarMetodo();
         Colecciones.ejemploHashMap();
         Colecciones.ejemploListas();

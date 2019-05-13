@@ -7,6 +7,7 @@ package com.sinensia.dao;
 
 import com.sinensia.Cliente;
 import com.sinensia.ClienteInvitado;
+import com.sinensia.Producto;
 
 /**
  *
@@ -24,5 +25,17 @@ public class ProbandoDAO {
         repoCli.leerTodos();
         repoCli.modificar(new Cliente(1, "AnaModificado", "aaammm@aa.es"));
         
+    }
+    
+    public static void probarProducto(){
+        ProductoDAO repoProducto = new ProductoDAO();
+        repoProducto.poner(new Producto(1, "producto1", 100));
+        repoProducto.poner(new Producto(2, "producto2", 200));
+        repoProducto.poner(new Producto(3, "producto3", 300));
+        
+        repoProducto.leerTodos();
+        repoProducto.modificar(new Producto(3, "producto3modif", 150));
+        Producto pro = repoProducto.leerUno(3);
+        System.out.println("Producto modificado: " + pro.toString());
     }
 }

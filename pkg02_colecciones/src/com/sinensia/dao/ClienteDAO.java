@@ -20,7 +20,6 @@ public class ClienteDAO implements InterfazDao<Cliente>{
     //La clase DAO para el cliente, recibe el tipo de dato Cliente. En la interfaz está como genérico para poder hacer esto y reutilizarla.
     HashMap<Long, Cliente> mapa;
     
-    
     public ClienteDAO(){
         mapa = new HashMap<>();
     }
