@@ -51,19 +51,24 @@ public class ClienteDAO implements InterfazDao<Cliente>{
 
     @Override
     public List<Cliente> leerTodos() {
-        ArrayList arrayClientes;
-        arrayClientes = new ArrayList();
+        ArrayList<Cliente> arrayClientes;
+        arrayClientes = new ArrayList<Cliente>();
          for (Map.Entry<Long, Cliente> entrada : mapa.entrySet()){
-              arrayClientes.add(entrada);
+              arrayClientes.add(entrada.getValue());
               System.out.println("arrayClientes: " + arrayClientes.toString() + "key es: " + entrada.getKey() + " value es: " + entrada.getValue());
          }
-          return arrayClientes;
+          return arrayClientes; //Cast implicito.
     }
 
     @Override
     public void modificar(Cliente nuevoValor) {
+       /*dos formas de hacerlo: 
         mapa.put(nuevoValor.getId(), nuevoValor );
-        System.out.println("modifico valor de cliente " + nuevoValor.getId() + "con el nombre : " + nuevoValor.getNombre());
+        System.out.println("modifico valor de cliente " + nuevoValor.getId() + "con el nombre : " + nuevoValor.getNombre());*/
+       Cliente cli = mapa.get(nuevoValor.getId());
+       cli.setActivo(nuevoValor.isActivo());
+       cli.setEmail(nuevoValor.getEmail());
+       cli.setNombre(nuevoValor.getNombre());
     }
     
     

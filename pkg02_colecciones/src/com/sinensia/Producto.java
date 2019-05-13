@@ -9,14 +9,15 @@ package com.sinensia;
  *
  * @author Admin
  */
-public class Producto {
-    protected long id;
+public class Producto extends Entidad{
+    //protected long id;
     protected String nombre;  
     private long precio;
     private long stock;
 
     public Producto(long id, String nombre, long precio) {
-        this.id = id;   
+       // this.id = id;   
+        super(id);
         if (nombre == null || nombre == ""){
             System.err.println("Nombre de proucto inválido");
         }
@@ -25,13 +26,13 @@ public class Producto {
         this.stock = 0;
     }
 
-    public long getId() {
+   /* public long getId() {
         return id;
     }
 
     public void setId(long id) {
         this.id = id;
-    }
+    }*/
 
     public String getNombre() {
         return nombre;
@@ -59,7 +60,7 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto [" + id + ", " + nombre + ", " + stock + "]";
+        return "Producto [" + id + ", " + nombre + ", " + precio +  ", " + stock + "]";
     }
     
     

@@ -1,14 +1,18 @@
 package com.sinensia;
 
-public class Cliente {
-    protected long id;
+import com.sinensia.dao.GenericoDAO;
+
+//Llamada a una clase anidada dentro de GenericoDAO
+public class Cliente extends Entidad{
+    
     protected String nombre;  //si fuera private, no lo vería ningún objeto fuera de esta clase. Lo pongo protected para que lo vean también los hijos (protected)
     private String email;
     private boolean activo;
 
     public Cliente(long id, String nombre, String email) /*throws Exception */ {
-        this.id = id;    //el this.id se refiere al id de la variable atributo de la clase. id sin this es id recibido como parámetro
+        //this.id = id;    //el this.id se refiere al id de la variable atributo de la clase. id sin this es id recibido como parámetro
         //En el método constructor, meto una validación.
+        super(id);
         if (nombre == null || nombre == ""){
            // throw new Exception("Nombre de cliente inválido");
             System.err.println("Nombre de cliente inválido");
@@ -19,13 +23,13 @@ public class Cliente {
         
     }
     
-    public long getId(){
+    /*public long getId(){
         return this.id;
     }
 
     public void setId(long id) {
         this.id = id;
-    }
+    }*/
 
     public String getNombre() {
         return nombre;
