@@ -9,10 +9,12 @@ import com.sinensia.Cliente;
 import com.sinensia.ClienteInvitado;
 import com.sinensia.ClienteVip;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  *
@@ -50,7 +52,22 @@ public class Colecciones {
              Cliente cliente = parClaveValor.getValue();
              System.out.println(" Nombre: " + cliente.getNombre());
          }
-}
+         
+         //Ejemplo Mapas con tipos genéricos: Date, Cliente
+         Map<Date, Cliente> mapClientesFecha = new TreeMap<Date, Cliente>();
+         mapClientesFecha.put(new Date(82, 4, 9), luis);
+         mapClientesFecha.put(new Date(81, 4, 9), new Cliente(7, "Fulano", "aa@bb.es"));
+         mapClientesFecha.put(new Date(82, 9, 19), new Cliente(8, "Mengano", "mm@bb.es"));
+         mapClientesFecha.put(new Date(80, 7, 10), diccionarioClientes.get("c3"));
+        
+         System.out.println("\n\n*******Mapa ordenado por fecha********\n");
+         for (Map.Entry<Date, Cliente> entrada : mapClientesFecha.entrySet()){
+         
+             System.out.println("\n - Clave:  "+ entrada.getKey().toString());
+             System.out.println("  Valor: " + entrada.getValue().toString());
+         }
+         
+} 
     public static void ejemploListas(){
      ArrayList<Cliente> listaClientes;
         listaClientes = new ArrayList();
