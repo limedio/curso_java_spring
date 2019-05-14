@@ -8,6 +8,8 @@ import com.sinensia.poo_avanzado.ProbandoAnimales;
 import com.sinensia.pruebas.Herencia;
 import com.sinensia.pruebas.Fechas;
 import com.sinensia.pruebas.Colecciones;
+import static com.sinensia.pruebas.Ficheros.escrituraStream;
+import static com.sinensia.pruebas.Ficheros.lecturaFich;
 import static com.sinensia.pruebas.Ficheros.probarEscritura;
 import com.sinensia.pruebas.Polimorfismo;
 import java.io.IOException;
@@ -22,9 +24,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        try {
-            probarEscritura();
-            /*probarCliente();
+        //try {
+             lecturaFich();
+            //escrituraStream();
+           /* probarEscritura();
+            probarCliente();
             ProbandoDAO.probarProducto();
             ProbandoGenericos.probarMetodo();
             Colecciones.ejemploHashMap();
@@ -34,10 +38,10 @@ public class Main {
             Polimorfismo.polimorfeando();
             Polimorfismo.polimorfeandoConListas();
             Colecciones.ejemploSet();
-            ProbandoAnimales.probarClasesAbstractas();*/
+            ProbandoAnimales.probarClasesAbstractas();
         } catch (IOException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
       
     }
     
