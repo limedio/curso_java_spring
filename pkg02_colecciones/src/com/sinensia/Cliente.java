@@ -3,7 +3,7 @@ package com.sinensia;
 import com.sinensia.dao.GenericoDAO;
 
 //Llamada a una clase anidada dentro de GenericoDAO
-public class Cliente extends Entidad{
+public class Cliente extends Entidad implements Comparable<Cliente>{
     
     protected String nombre;  //si fuera private, no lo vería ningún objeto fuera de esta clase. Lo pongo protected para que lo vean también los hijos (protected)
     private String email;
@@ -75,6 +75,14 @@ public class Cliente extends Entidad{
         //return super.toString(); //To change body of generated methods, choose Tools | Templates.
         return "Cliente [" + id + ", " + nombre + ", " + email + "]";
     }
-    
-    
+
+    @Override
+    public int compareTo(Cliente otroCli) {
+        //comparamos por nombre, por el compareTo de String
+        if (nombre.compareTo(otroCli.nombre)==0){
+            return email.compareTo(otroCli.email);
+        }else {
+            return nombre.compareTo(otroCli.nombre);
+        }
+    }
 }

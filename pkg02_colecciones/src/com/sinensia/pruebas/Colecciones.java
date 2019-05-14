@@ -24,6 +24,17 @@ public class Colecciones {
     
     private static ArrayList<Cliente> arrayListaClientes;
     
+    public static void comparaciones(){
+        Cliente luis = new Cliente(2, "Luis", "luis@aa.com");
+        Cliente bea = new Cliente(3, "Bea", null);
+        if (bea.compareTo(luis)<0)
+            System.out.println("BEA es menor que LUIS");
+        else if (bea.compareTo(luis)==0)
+            System.out.println("BEA es igual que LUIS");
+        else if (bea.compareTo(luis)>0)
+            System.out.println("BEA es mayor que LUIS");
+    }
+    
     
     public static void ejemploHashMap(){
       HashMap<String, Cliente> diccionarioClientes;

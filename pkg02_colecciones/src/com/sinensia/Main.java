@@ -8,10 +8,12 @@ import com.sinensia.poo_avanzado.ProbandoAnimales;
 import com.sinensia.pruebas.Herencia;
 import com.sinensia.pruebas.Fechas;
 import com.sinensia.pruebas.Colecciones;
+import static com.sinensia.pruebas.Colecciones.comparaciones;
 import static com.sinensia.pruebas.Ficheros.escrituraStream;
 import static com.sinensia.pruebas.Ficheros.lecturaFich;
 import static com.sinensia.pruebas.Ficheros.probarEscritura;
 import com.sinensia.pruebas.Polimorfismo;
+import static com.sinensia.pruebas.TratamientoCadenas.pruebasString;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,9 +27,11 @@ public class Main {
      */
     public static void main(String[] args) {
         //try {
+            pruebasString();
+            /* comparaciones();
              lecturaFich();
-            //escrituraStream();
-           /* probarEscritura();
+            escrituraStream();
+            probarEscritura();
             probarCliente();
             ProbandoDAO.probarProducto();
             ProbandoGenericos.probarMetodo();
