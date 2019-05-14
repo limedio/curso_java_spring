@@ -15,7 +15,8 @@ import com.sinensia.Producto;
  */
 public class ProbandoDAO {
     public static void probarCliente(){
-        ClienteDAO repoCli = new ClienteDAO();
+        //ClienteDAO repoCli = new ClienteDAO();
+        GenericoDAO<Cliente> repoCli = new GenericoDAO();
         repoCli.poner(new Cliente(1, "Ana", "aaa@aa.es"));
         //Se pueden añadir objetos de tipo ClienteInvitado porque heredan de Cliente.
         repoCli.poner(new ClienteInvitado(2, "Juan", "juan@aa.es"));

@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="pkg02_colecciones">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="com.sinensia" visibility="public" xPosition="2520.0" yPosition="95.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="activo" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="String" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setEmail" returnType="String" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="isActivo" returnType="boolean" visibility="public"/>
+        <Method name="setActivo" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="activo"/>
+        </Method>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClienteInvitado" package="com.sinensia" visibility="public" xPosition="2410.0" yPosition="938.0">
+      <Fields>
+        <Field name="duracionMaxima" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDuracionMaxima" returnType="int" visibility="public"/>
+        <Method name="setDuracionMaxima" returnType="int" visibility="public">
+          <Argument type="int" name="duracionMaxima"/>
+        </Method>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClienteVip" package="com.sinensia" visibility="public" xPosition="2659.0" yPosition="1191.0">
+      <Fields>
+        <Field name="beneficios" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="beneficios"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBeneficio" returnType="String" visibility="public"/>
+        <Method name="setBeneficio" returnType="String" visibility="public">
+          <Argument type="String" name="beneficio"/>
+        </Method>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClienteDAO" package="com.sinensia.dao" visibility="public" xPosition="3160.0" yPosition="1247.0">
+      <Fields>
+        <Field name="mapa" type="HashMap&lt;Long, Cliente&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="poner" returnType="Cliente" visibility="public">
+          <Argument type="Cliente" name="cli"/>
+        </Method>
+        <Method name="leerUno" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="eliminar" returnType="Cliente" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="eliminar" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="leerTodos" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="modificar" returnType="Cliente" visibility="public">
+          <Argument type="Cliente" name="nuevoValor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GenericoDAO" package="com.sinensia.dao" visibility="public" xPosition="3784.0" yPosition="1717.0">
+      <Fields>
+        <Field name="mapa" type="HashMap&lt;Long, T&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="poner" returnType="T" visibility="public">
+          <Argument type="T" name="cli"/>
+        </Method>
+        <Method name="leerUno" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="eliminar" returnType="T" visibility="public">
+          <Argument type="T" name="cliente"/>
+        </Method>
+        <Method name="eliminar" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="leerTodos" returnType="List&lt;T&gt;" visibility="public"/>
+        <Method name="modificar" returnType="T" visibility="public">
+          <Argument type="T" name="nuevoValor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProbandoDAO" package="com.sinensia.dao" visibility="public" xPosition="2410.0" yPosition="1857.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="probarCliente" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="probarProducto" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="ProductoDAO" package="com.sinensia.dao" visibility="public" xPosition="3721.0" yPosition="803.0">
+      <Fields>
+        <Field name="mapa" type="HashMap&lt;Long, Producto&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="poner" returnType="Producto" visibility="public">
+          <Argument type="Producto" name="producto"/>
+        </Method>
+        <Method name="leerUno" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="leerTodos" returnType="List&lt;Producto&gt;" visibility="public"/>
+        <Method name="eliminar" returnType="Producto" visibility="public">
+          <Argument type="Producto" name="producto"/>
+        </Method>
+        <Method name="eliminar" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="modificar" returnType="Producto" visibility="public">
+          <Argument type="Producto" name="nuevoValorProducto"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Entidad" package="com.sinensia" visibility="public" xPosition="3170.0" yPosition="-35.0">
+      <Fields>
+        <Field name="id" type="long" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="long" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="setId" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FechaSinMinutos" package="com.sinensia" visibility="public" xPosition="1613.0" yPosition="1848.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="year"/>
+          <Argument type="int" name="month"/>
+          <Argument type="int" name="dayOfMonth"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getTimeWithoutSeconds" returnType="Date" visibility="public"/>
+        <Method name="equals" returnType="Object" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProbandoGenericos" package="com.sinensia.genericos" visibility="public" xPosition="29.0" yPosition="1778.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="probarMetodo" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="insertarDoble" returnType="int" visibility="public" isStatic="true">
+          <Argument type="ArrayList&lt;Integer&gt;" name="lista"/>
+          <Argument type="int" name="valor"/>
+        </Method>
+        <Method name="insertarDoble" returnType="String" visibility="public" isStatic="true">
+          <Argument type="ArrayList&lt;String&gt;" name="lista"/>
+          <Argument type="String" name="valor"/>
+        </Method>
+        <Method name="insertarDobleGenerico" returnType="Clase" visibility="public" isStatic="true">
+          <Argument type="ArrayList&lt;Clase&gt;" name="lista"/>
+          <Argument type="Clase" name="valor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="com.sinensia" visibility="public" xPosition="525.0" yPosition="1850.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Animal" package="com.sinensia.poo_avanzado" visibility="public" isAbstract="true" xPosition="1450.0" yPosition="455.0">
+      <Fields>
+        <Field name="patas" type="int" visibility="protected"/>
+        <Field name="aerobico" type="boolean" visibility="protected"/>
+        <Field name="acuatico" type="boolean" visibility="protected"/>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="tamanho" type="float" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="patas"/>
+          <Argument type="boolean" name="aerobico"/>
+          <Argument type="boolean" name="acuatico"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mover" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="comer" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="volar" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="isAnfibio" returnType="boolean" visibility="public"/>
+        <Method name="getPatas" returnType="int" visibility="public"/>
+        <Method name="setPatas" returnType="int" visibility="public">
+          <Argument type="int" name="patas"/>
+        </Method>
+        <Method name="isAerobico" returnType="boolean" visibility="public"/>
+        <Method name="setAerobico" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="aerobico"/>
+        </Method>
+        <Method name="isAcuatico" returnType="boolean" visibility="public"/>
+        <Method name="setAcuatico" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="acuatico"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="String" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getTamanho" returnType="float" visibility="public"/>
+        <Method name="setTamanho" returnType="float" visibility="public">
+          <Argument type="float" name="tamanho"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AnimalSalvaje" package="com.sinensia.poo_avanzado" visibility="public" isAbstract="true" xPosition="1410.0" yPosition="1191.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="patas"/>
+          <Argument type="boolean" name="aerobico"/>
+          <Argument type="boolean" name="acuatico"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Caballo" package="com.sinensia.poo_avanzado" visibility="public" xPosition="721.0" yPosition="549.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mover" returnType="void" visibility="public"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+        <Method name="volar" returnType="void" visibility="public"/>
+        <Method name="saludarAlPropietario" returnType="void" visibility="public"/>
+        <Method name="pedirComida" returnType="void" visibility="public"/>
+        <Method name="mamar" returnType="Mamifero" visibility="public">
+          <Argument type="Mamifero" name="mam"/>
+        </Method>
+        <Method name="nombrar" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Dragon" package="com.sinensia.poo_avanzado" visibility="public" xPosition="365.0" yPosition="549.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+          <Argument type="int" name="patas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mover" returnType="void" visibility="public"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+        <Method name="volar" returnType="void" visibility="public"/>
+        <Method name="saludarAlPropietario" returnType="void" visibility="public"/>
+        <Method name="cazar" returnType="String" visibility="public">
+          <Argument type="String" name="presa"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Mascota" package="com.sinensia.poo_avanzado" visibility="public" isAbstract="true" xPosition="261.0" yPosition="124.0">
+      <Fields>
+        <Field name="propietario" type="Cliente" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="patas"/>
+          <Argument type="boolean" name="aerobico"/>
+          <Argument type="boolean" name="acuatico"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="pedirComida" returnType="void" visibility="public"/>
+        <Method name="saludarAlPropietario" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="getPropietario" returnType="Cliente" visibility="public"/>
+        <Method name="setPropietario" returnType="Cliente" visibility="public">
+          <Argument type="Cliente" name="propietario"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProbandoAnimales" package="com.sinensia.poo_avanzado" visibility="public" xPosition="818.0" yPosition="1876.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="probarClasesAbstractas" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Tigre" package="com.sinensia.poo_avanzado" visibility="public" xPosition="398.0" yPosition="1094.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mover" returnType="void" visibility="public"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+        <Method name="volar" returnType="void" visibility="public"/>
+        <Method name="cazar" returnType="String" visibility="public">
+          <Argument type="String" name="presa"/>
+        </Method>
+        <Method name="mamar" returnType="Mamifero" visibility="public">
+          <Argument type="Mamifero" name="mam"/>
+        </Method>
+        <Method name="nombrar" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TortugaNinja" package="com.sinensia.poo_avanzado" visibility="public" xPosition="29.0" yPosition="568.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mover" returnType="void" visibility="public"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+        <Method name="volar" returnType="void" visibility="public"/>
+        <Method name="saludarAlPropietario" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tucan" package="com.sinensia.poo_avanzado" visibility="public" xPosition="1560.0" yPosition="1463.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="float" name="tamanho"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mover" returnType="void" visibility="public"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+        <Method name="volar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="com.sinensia" visibility="public" xPosition="3722.0" yPosition="104.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="precio" type="long" visibility="private"/>
+        <Field name="stock" type="long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="long" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="String" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPrecio" returnType="long" visibility="public"/>
+        <Method name="setPrecio" returnType="long" visibility="public">
+          <Argument type="long" name="precio"/>
+        </Method>
+        <Method name="getStock" returnType="long" visibility="public"/>
+        <Method name="setStock" returnType="long" visibility="public">
+          <Argument type="long" name="stock"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Colecciones" package="com.sinensia.pruebas" visibility="public" xPosition="2230.0" yPosition="714.0">
+      <Fields>
+        <Field name="arrayListaClientes" type="ArrayList&lt;Cliente&gt;" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="ejemploHashMap" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="ejemploListas" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="ejemploSet" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Fechas" package="com.sinensia.pruebas" visibility="public" xPosition="1387.0" yPosition="1876.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="probar" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Herencia" package="com.sinensia.pruebas" visibility="public" xPosition="1118.0" yPosition="1889.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="probandoHerencia" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Polimorfismo" package="com.sinensia.pruebas" visibility="public" xPosition="2015.0" yPosition="1876.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="polimorfeando" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="polimorfeandoConListas" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Interface name="InterfazDao" package="com.sinensia.dao" visibility="public" xPosition="3784.0" yPosition="1271.0">
+      <Methods>
+        <Method name="poner" returnType="T" visibility="package">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="leerUno" returnType="long" visibility="package">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="leerTodos" returnType="List&lt;T&gt;" visibility="package"/>
+        <Method name="eliminar" returnType="T" visibility="package">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="eliminar" returnType="long" visibility="package">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="modificar" returnType="T" visibility="package">
+          <Argument type="T" name="nuevoValor"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Depredador" package="com.sinensia.poo_avanzado" visibility="public" xPosition="431.0" yPosition="847.0">
+      <Methods>
+        <Method name="cazar" returnType="String" visibility="package">
+          <Argument type="String" name="presa"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Mamifero" package="com.sinensia.poo_avanzado" visibility="public" xPosition="734.0" yPosition="1137.0">
+      <Methods>
+        <Method name="mamar" returnType="Mamifero" visibility="package">
+          <Argument type="Mamifero" name="mam"/>
+        </Method>
+        <Method name="nombrar" returnType="String" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Class name="Compra" package="" visibility="public" xPosition="2116.0" yPosition="428.0">
+      <Fields>
+        <Field name="clienteID" type="int" visibility="private"/>
+        <Field name="productoID" type="int" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.sinensia.poo_avanzado.Caballo" target="com.sinensia.poo_avanzado.Mamifero"/>
+    <IsRelation name="is" source="com.sinensia.poo_avanzado.Dragon" target="com.sinensia.poo_avanzado.Mascota"/>
+    <IsRelation name="is" source="com.sinensia.poo_avanzado.Tucan" target="com.sinensia.poo_avanzado.AnimalSalvaje"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.sinensia.dao.ClienteDAO" target="com.sinensia.dao.InterfazDao"/>
+    <UseRelation source="com.sinensia.poo_avanzado.Caballo" target="com.sinensia.poo_avanzado.Mamifero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mapa" source="com.sinensia.dao.ProductoDAO" target="com.sinensia.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Long, Producto&gt;"/>
+    <IsRelation name="is" source="com.sinensia.poo_avanzado.Tigre" target="com.sinensia.poo_avanzado.AnimalSalvaje"/>
+    <HasRelation name="Cliente" source="com.sinensia.Cliente" target="com.sinensia.Producto" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.sinensia.poo_avanzado.Mascota" target="com.sinensia.poo_avanzado.Animal"/>
+    <HasRelation name="comprador" source="com.sinensia.Cliente" target="com.sinensia.Producto" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.sinensia.poo_avanzado.Dragon" target="com.sinensia.poo_avanzado.Depredador"/>
+    <IsRelation name="is" source="com.sinensia.poo_avanzado.Caballo" target="com.sinensia.poo_avanzado.Mascota"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.sinensia.poo_avanzado.Tigre" target="com.sinensia.poo_avanzado.Mamifero"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.sinensia.dao.ProductoDAO" target="com.sinensia.dao.InterfazDao"/>
+    <UseRelation source="com.sinensia.dao.ClienteDAO" target="com.sinensia.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="kjj" source="com.sinensia.Cliente" target="com.sinensia.Producto" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation source="com.sinensia.dao.ProductoDAO" target="com.sinensia.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.sinensia.poo_avanzado.AnimalSalvaje" target="com.sinensia.poo_avanzado.Animal"/>
+    <UseRelation source="com.sinensia.poo_avanzado.Tigre" target="com.sinensia.poo_avanzado.Mamifero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.sinensia.ClienteInvitado" target="com.sinensia.Cliente"/>
+    <HasRelation name="propietario" source="com.sinensia.poo_avanzado.Mascota" target="com.sinensia.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mapa" source="com.sinensia.dao.ClienteDAO" target="com.sinensia.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Long, Cliente&gt;"/>
+    <IsRelation name="is" source="com.sinensia.Cliente" target="com.sinensia.Entidad"/>
+    <UseRelation source="com.sinensia.poo_avanzado.Mascota" target="com.sinensia.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.sinensia.poo_avanzado.Mamifero" target="com.sinensia.poo_avanzado.Mamifero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.sinensia.dao.GenericoDAO" target="com.sinensia.dao.InterfazDao"/>
+    <HasRelation name="arrayListaClientes" source="com.sinensia.pruebas.Colecciones" target="com.sinensia.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Cliente&gt;"/>
+    <IsRelation name="is" source="com.sinensia.Producto" target="com.sinensia.Entidad"/>
+    <IsRelation name="is" source="com.sinensia.poo_avanzado.TortugaNinja" target="com.sinensia.poo_avanzado.Mascota"/>
+    <IsRelation name="is" source="com.sinensia.ClienteVip" target="com.sinensia.Cliente"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.sinensia.poo_avanzado.Tigre" target="com.sinensia.poo_avanzado.Depredador"/>
+    <HasRelation name="ñlkk" source="Compra" target="com.sinensia.Cliente" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
