@@ -1,4 +1,4 @@
-/*  * GPL 3.0 */.
+/*  * GPL 3.0 */ 
 /*existe un objeto console para mensajes*/
 
 console.log("Hola por consola");
